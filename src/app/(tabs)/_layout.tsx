@@ -1,10 +1,8 @@
 import React from "react";
-import { StyleSheet } from "react-native";
 import { GlobalStyles } from "@/utils/GlobalStyles";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { Link, Tabs } from "expo-router";
 import { Pressable } from "react-native";
-
 import Colors from "@/constants/Colors";
 import { useColorScheme } from "@/components/useColorScheme";
 import { useClientOnlyValue } from "@/components/useClientOnlyValue";
