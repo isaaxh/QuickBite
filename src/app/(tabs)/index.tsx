@@ -2,11 +2,12 @@ import { StyleSheet } from "react-native";
 
 import EditScreenInfo from "@/components/EditScreenInfo";
 import { Text, View } from "@/components/Themed";
+import { EmojiHappy } from "iconsax-react-native";
 
-export default function TabOneScreen() {
+export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Text className="text-black bg-red-50">Home</Text>
+      <Text className="bg-red-100">Home</Text>
       <View
         style={styles.separator}
         lightColor="#eee"

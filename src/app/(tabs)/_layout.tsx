@@ -1,4 +1,6 @@
 import React from "react";
+import { StyleSheet } from "react-native";
+import { GlobalStyles } from "@/utils/GlobalStyles";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { Link, Tabs } from "expo-router";
 import { Pressable } from "react-native";
@@ -6,14 +8,7 @@ import { Pressable } from "react-native";
 import Colors from "@/constants/Colors";
 import { useColorScheme } from "@/components/useColorScheme";
 import { useClientOnlyValue } from "@/components/useClientOnlyValue";
-
-// You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
-function TabBarIcon(props: {
-  name: React.ComponentProps<typeof FontAwesome>["name"];
-  color: string;
-}) {
-  return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
-}
+import TabBarIcon from "@/components/TabBarIcon";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -22,9 +17,29 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
-        // Disable the static render of the header on web
-        // to prevent a hydration error in React Navigation v6.
-        headerShown: useClientOnlyValue(false, true),
+        /* headerShown: useClientOnlyValue(false, true), */
+        headerShown: false,
+        tabBarStyle: {
+          height: 65,
+          position: "absolute",
+          bottom: 25,
+          right: 20,
+          left: 20,
+          backgroundColor: "#ffff",
+          /* backgroundColor: COLORS["primary-100"], */
+          borderRadius: 25,
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          ...GlobalStyles.shadow,
+        },
+        tabBarLabelStyle: {
+          marginBottom: 3,
+        },
+        tabBarItemStyle: {
+          padding: 5,
+        },
+        /* tabBarShowLabel: false, */
       }}
     >
       <Tabs.Screen
@@ -52,19 +67,14 @@ export default function TabLayout() {
         name="bag"
         options={{
           title: "Bag",
-          tabBarIcon: ({ color }) => (
-            <TabBarIcon name="shopping-bag" color={color} />
-          ),
+          tabBarIcon: ({ color }) => <TabBarIcon name="bag2" color={color} />,
         }}
       />
-
       <Tabs.Screen
         name="orders"
         options={{
           title: "Orders",
-          tabBarIcon: ({ color }) => (
-            <TabBarIcon name="sticky-note" color={color} />
-          ),
+          tabBarIcon: ({ color }) => <TabBarIcon name="note" color={color} />,
         }}
       />
 
@@ -72,7 +82,9 @@ export default function TabLayout() {
         name="profile"
         options={{
           title: "Profile",
-          tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon name="profile" color={color} />
+          ),
         }}
       />
     </Tabs>
