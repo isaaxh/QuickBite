@@ -22,6 +22,7 @@ module.exports = {
         },
         success: "#53A654",
         error: "#F84545",
+        background: "#FFFFFF",
       },
     },
   },

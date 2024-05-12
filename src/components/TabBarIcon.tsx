@@ -1,11 +1,9 @@
-import { Text } from "react-native";
 import { Home } from "iconsax-react-native";
 import { Bag2 } from "iconsax-react-native";
 import { Note } from "iconsax-react-native";
 import { Profile } from "iconsax-react-native";
 import { EmojiHappy } from "iconsax-react-native";
 import { ComponentProps } from "react";
-import { View } from "react-native";
 
 type TabBarIconProps = {
   name: string;

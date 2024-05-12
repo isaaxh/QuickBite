@@ -15,17 +15,13 @@ import { Link } from "expo-router";
 
 export default function HomeScreen() {
   return (
-    <SafeAreaView style={styles.container} className="flex-1 items-center">
+    <SafeAreaView className="bg-background flex-1 items-center">
       <Header />
-      <TextTitle>Food that will blow your mind!</TextTitle>
-      <TextSubTitle>Order from +400 top resturants</TextSubTitle>
-      <TextBody>
-        This resturant was established in 1980s. The home for veterens are here
-        to eat and dine all summer.
-      </TextBody>
-      <Link href="/SplashScreen">
-        <Text className="bg-red-100">Splash Screen</Text>
-      </Link>
+      <View className="bg-red-100 p-3 m-12 rounded-2xl w-full items-center">
+        <Link href="/SplashScreen">
+          <Text>Splash Screen</Text>
+        </Link>
+      </View>
     </SafeAreaView>
   );
 }

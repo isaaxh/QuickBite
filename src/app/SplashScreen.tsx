@@ -1,18 +1,9 @@
-import {
-  View,
-  Text,
-  Image,
-  Button,
-  TouchableOpacity,
-  Pressable,
-} from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { COLORS } from "@/constants/Colors";
 import TextTitle from "@/components/ui/texts/TextTitle";
 import TextBody from "@/components/ui/texts/TextBody";
-import UIButton from "@/components/ui/UIButton";
 import { Link } from "expo-router";
-import TestButton from "@/components/ui/texts/TestButton";
 
 export default function SplashScreen() {
   return (
