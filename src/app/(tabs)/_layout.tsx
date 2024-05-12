@@ -15,6 +15,7 @@ export default function TabLayout() {
 
   return (
     <Tabs
+      initialRouteName="profile"
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
         /* headerShown: useClientOnlyValue(false, true), */
@@ -43,7 +44,7 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen
-        name="index"
+        name="home"
         options={{
           title: "Home",
           tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,

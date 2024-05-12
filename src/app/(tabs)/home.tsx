@@ -11,6 +11,7 @@ import TextTitle from "@/components/ui/texts/TextTitle";
 import TextSubTitle from "@/components/ui/texts/TextSubTitle";
 import TextBody from "@/components/ui/texts/TextBody";
 import { COLORS } from "@/constants/Colors";
+import { Link } from "expo-router";
 
 export default function HomeScreen() {
   return (
@@ -22,7 +23,9 @@ export default function HomeScreen() {
         This resturant was established in 1980s. The home for veterens are here
         to eat and dine all summer.
       </TextBody>
-      <Text className="bg-red-100">Home tab</Text>
+      <Link href="/SplashScreen">
+        <Text className="bg-red-100">Splash Screen</Text>
+      </Link>
     </SafeAreaView>
   );
 }
