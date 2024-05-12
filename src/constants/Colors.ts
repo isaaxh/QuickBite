@@ -1,24 +1,12 @@
 /* const tintColorLight = "#2f95dc"; */
 
-const PRIMARY = {
-  "100": "#FFA500",
-  "200": "#E59400",
-  "300": "#CF8600",
-  "400": "#BA7800",
-  "500": "#A76C00",
-};
-
 const BLACK = {
   "100": "#101010",
   "200": "#171819",
   "500": "#797D82",
 };
 
-const SUCCESS = "#53A654";
-
-const ERROR = "#F84545";
-
-const tintColorLight = BLACK[100];
+const tintColorLight = BLACK["100"];
 const tintColorDark = "#fff";
 
 export default {
@@ -47,6 +35,8 @@ export const COLORS = {
   "black-100": "#101010",
   "black-200": "#171819",
   "black-500": "#797D82",
+  white: "#fffefe",
   success: "#53A654",
   error: "#F84545",
+  background: "#FFFFFF",
 };
