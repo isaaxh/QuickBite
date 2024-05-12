@@ -1,25 +1,25 @@
 import { StyleSheet } from "react-native";
-
-import EditScreenInfo from "@/components/EditScreenInfo";
 import { Text, View } from "@/components/Themed";
-import { EmojiHappy } from "iconsax-react-native";
+import Header from "@/components/Header";
+import {
+  SafeAreaView,
+  SafeAreaProvider,
+  SafeAreaInsetsContext,
+  useSafeAreaInsets,
+} from "react-native-safe-area-context";
 
 export default function HomeScreen() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView className="flex-1 items-center">
+      <Header />
       <Text className="bg-red-100">Home</Text>
-      <View
-        style={styles.separator}
-        lightColor="#eee"
-        darkColor="rgba(255,255,255,0.1)"
-      />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: "orange",
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
