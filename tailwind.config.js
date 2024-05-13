@@ -7,6 +7,7 @@ module.exports = {
   ],
   theme: {
     extend: {
+      /*figure out how to import the COLORS var from colors.ts */
       colors: {
         primary: {
           100: "#FFA500",

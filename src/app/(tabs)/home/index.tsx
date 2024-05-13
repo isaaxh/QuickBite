@@ -1,4 +1,4 @@
-import { StyleSheet, Button } from "react-native";
+import { StyleSheet } from "react-native";
 import { Text, View } from "@/components/Themed";
 import Header from "@/components/Header";
 import {
@@ -7,18 +7,28 @@ import {
   SafeAreaInsetsContext,
   useSafeAreaInsets,
 } from "react-native-safe-area-context";
-import TextTitle from "@/components/ui/texts/TextTitle";
-import TextSubTitle from "@/components/ui/texts/TextSubTitle";
-import TextBody from "@/components/ui/texts/TextBody";
 import { COLORS } from "@/constants/Colors";
 import { Link } from "expo-router";
 import SearchBar from "@/components/SearchBar";
+import useToggle from "@/hooks/useToggle";
+import { useState } from "react";
 
 export default function HomeScreen() {
+  const { status: searchActive, setStatus: toggleSearchActive } =
+    useToggle(true);
+  const [searchPhrase, setSearchPhrase] = useState("");
+
+  /* console.log(searchActive); */
+
   return (
     <SafeAreaView className="bg-background flex-1 items-center">
       <Header />
-      <SearchBar />
+      <SearchBar
+        searchActive={searchActive}
+        toggleSearchActive={toggleSearchActive}
+        searchPhrase={searchPhrase}
+        setSearchPhrase={setSearchPhrase}
+      />
       <View className="bg-red-100 p-3 m-12 rounded-2xl w-full items-center">
         <Link href="/SplashScreen">
           <Text>Splash Screen</Text>
