@@ -1,12 +1,5 @@
-import {
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  Button,
-  Keyboard,
-} from "react-native";
-import React, { Dispatch, SetStateAction, useState } from "react";
+import { View, TextInput, TouchableOpacity, Keyboard } from "react-native";
+import React, { Dispatch, SetStateAction } from "react";
 import { COLORS } from "@/constants/Colors";
 import Icon from "./Icon";
 
@@ -26,7 +19,7 @@ export default function SearchBar({
   return (
     <View className="w-full">
       <View
-        style={{ backgroundColor: "#E7E6E6" }}
+        style={{ backgroundColor: COLORS.grey }}
         className="m-3 py-3 px-5 h-14 rounded-2xl items-center flex-row"
       >
         <View className="mr-4">
