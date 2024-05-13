@@ -12,11 +12,13 @@ import TextSubTitle from "@/components/ui/texts/TextSubTitle";
 import TextBody from "@/components/ui/texts/TextBody";
 import { COLORS } from "@/constants/Colors";
 import { Link } from "expo-router";
+import SearchBar from "@/components/SearchBar";
 
 export default function HomeScreen() {
   return (
     <SafeAreaView className="bg-background flex-1 items-center">
       <Header />
+      <SearchBar />
       <View className="bg-red-100 p-3 m-12 rounded-2xl w-full items-center">
         <Link href="/SplashScreen">
           <Text>Splash Screen</Text>
