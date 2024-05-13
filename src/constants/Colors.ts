@@ -35,6 +35,7 @@ export const COLORS = {
   "black-100": "#101010",
   "black-200": "#171819",
   "black-500": "#797D82",
+  grey: "#E7E6E6",
   white: "#fffefe",
   success: "#53A654",
   error: "#F84545",
