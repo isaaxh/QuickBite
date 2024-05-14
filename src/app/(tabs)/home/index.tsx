@@ -1,4 +1,4 @@
-import { Text, FlatList, StyleSheet, Pressable } from "react-native";
+import { Text, StyleSheet, Pressable } from "react-native";
 import { View } from "@/components/Themed";
 import Header from "@/components/Header";
 import {
@@ -12,8 +12,7 @@ import { Link } from "expo-router";
 import SearchBar from "@/components/SearchBar";
 import useToggle from "@/hooks/useToggle";
 import { useState } from "react";
-import RESTURANTS from "@/assets/data/resturants";
-import ResturantCard from "@/components/ResturantCard";
+import MyResturantCardList from "@/components/MyResturantCardList";
 
 export default function HomeScreen() {
   const { status: searchActive, setStatus: toggleSearchActive } =
@@ -47,12 +46,7 @@ export default function HomeScreen() {
           </Pressable>
         </Link>
       </View>
-      <FlatList
-        contentContainerStyle={{ paddingBottom: 80 }}
-        data={RESTURANTS}
-        renderItem={({ item }) => <ResturantCard resturant={item} />}
-        keyExtractor={(item) => item.id.toString()}
-      />
+      <MyResturantCardList />
     </SafeAreaView>
   );
 }
