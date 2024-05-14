@@ -14,6 +14,12 @@ function RootLayoutNav() {
           headerShown: true,
         }}
       />
+      <Stack.Screen
+        name="AllResturants"
+        options={{
+          headerShown: true,
+        }}
+      />
     </Stack>
   );
 }

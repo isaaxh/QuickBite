@@ -1,5 +1,5 @@
-import { FlatList, Image, ScrollView, StyleSheet } from "react-native";
-import { Text, View } from "@/components/Themed";
+import { Text, FlatList, StyleSheet, Pressable } from "react-native";
+import { View } from "@/components/Themed";
 import Header from "@/components/Header";
 import {
   SafeAreaView,
@@ -29,16 +29,30 @@ export default function HomeScreen() {
         searchPhrase={searchPhrase}
         setSearchPhrase={setSearchPhrase}
       />
+      <View className="w-full mb-4 mt-2 px-4 flex-row items-center justify-between">
+        <Text style={{ fontFamily: "Gilory-Bold", fontSize: 17 }}>
+          Popular Resturants
+        </Text>
+        <Link href="/(tabs)/home/AllResturants" asChild>
+          <Pressable hitSlop={5}>
+            <Text
+              style={{
+                fontFamily: "Gilory-SemiBold",
+                fontSize: 13,
+                color: COLORS["black-500"],
+              }}
+            >
+              View all
+            </Text>
+          </Pressable>
+        </Link>
+      </View>
       <FlatList
+        contentContainerStyle={{ paddingBottom: 80 }}
         data={RESTURANTS}
         renderItem={({ item }) => <ResturantCard resturant={item} />}
         keyExtractor={(item) => item.id.toString()}
       />
-      <View className="bg-red-100 p-3 m-12 rounded-2xl w-full items-center">
-        <Link href="/SplashScreen">
-          <Text>Splash Screen</Text>
-        </Link>
-      </View>
     </SafeAreaView>
   );
 }
