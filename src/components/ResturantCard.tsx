@@ -1,6 +1,5 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
-import Ratings from "./Ratings";
 import Distance from "./Distance";
 import { Rating } from "react-native-ratings";
 import { COLORS } from "@/constants/Colors";
