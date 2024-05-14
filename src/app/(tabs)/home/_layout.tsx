@@ -9,13 +9,13 @@ function RootLayoutNav() {
   return (
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen
-        name="selectLocation"
+        name="SelectLocationScreen"
         options={{
           headerShown: true,
         }}
       />
       <Stack.Screen
-        name="AllResturants"
+        name="AllResturantScreen"
         options={{
           headerShown: true,
         }}

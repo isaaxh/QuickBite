@@ -32,7 +32,7 @@ export default function HomeScreen() {
         <Text style={{ fontFamily: "Gilory-Bold", fontSize: 17 }}>
           Popular Resturants
         </Text>
-        <Link href="/(tabs)/home/AllResturants" asChild>
+        <Link href="/(tabs)/home/AllResturantScreen" asChild>
           <Pressable hitSlop={5}>
             <Text
               style={{

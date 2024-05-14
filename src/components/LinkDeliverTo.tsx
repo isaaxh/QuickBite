@@ -13,7 +13,7 @@ export default function DerliverToLink() {
       >
         Deliver to:
       </Text>
-      <Link href="/(tabs)/home/selectLocation" asChild>
+      <Link href="/(tabs)/home/SelectLocationScreen" asChild>
         <TouchableOpacity className="flex-row items-center">
           <Text
             style={{ fontSize: 12, fontFamily: "Gilory-Medium" }}
