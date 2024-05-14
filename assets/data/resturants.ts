@@ -27,7 +27,7 @@ export default [
     id: 4,
     name: "Mexican Fiesta",
     distance: 1.5,
-    ratings: 4.1,
+    ratings: 3.8,
     imgUrl:
       "https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -35,7 +35,7 @@ export default [
     id: 5,
     name: "Pizza Palace",
     distance: 1.7,
-    ratings: 4.3,
+    ratings: 3,
     imgUrl:
       "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -43,7 +43,7 @@ export default [
     id: 6,
     name: "Burger Joint",
     distance: 2.0,
-    ratings: 4.4,
+    ratings: 3.8,
     imgUrl:
       "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=3399&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -51,7 +51,7 @@ export default [
     id: 7,
     name: "Thai Orchid",
     distance: 2.3,
-    ratings: 4.7,
+    ratings: 4,
     imgUrl:
       "https://images.unsplash.com/photo-1607330289024-1535c6b4e1c1?q=80&w=2980&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -59,7 +59,7 @@ export default [
     id: 8,
     name: "Indian Spice",
     distance: 2.5,
-    ratings: 4.0,
+    ratings: 3.9,
     imgUrl:
       "https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=2597&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -67,7 +67,7 @@ export default [
     id: 9,
     name: "Steakhouse Deluxe",
     distance: 2.8,
-    ratings: 4.5,
+    ratings: 3.5,
     imgUrl:
       "https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -75,7 +75,7 @@ export default [
     id: 10,
     name: "Vegetarian Haven",
     distance: 3.0,
-    ratings: 4.2,
+    ratings: 4.1,
     imgUrl:
       "https://images.unsplash.com/photo-1598449426314-8b02525e8733?q=80&w=3426&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -107,7 +107,7 @@ export default [
     id: 14,
     name: "Chinese Delight",
     distance: 4.1,
-    ratings: 4.8,
+    ratings: 4.9,
     imgUrl:
       "https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=3392&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -115,7 +115,7 @@ export default [
     id: 15,
     name: "Italian Trattoria",
     distance: 4.3,
-    ratings: 4.1,
+    ratings: 3.1,
     imgUrl:
       "https://images.unsplash.com/photo-1616299915952-04c803388e5f?q=80&w=3462&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -123,7 +123,7 @@ export default [
     id: 16,
     name: "BBQ Smokehouse",
     distance: 4.6,
-    ratings: 4.7,
+    ratings: 3.7,
     imgUrl:
       "https://images.unsplash.com/photo-1614119068601-483274e9dcb7?q=80&w=3406&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -147,7 +147,7 @@ export default [
     id: 19,
     name: "Vietnamese Pho",
     distance: 5.3,
-    ratings: 4.3,
+    ratings: 3.3,
     imgUrl:
       "https://images.unsplash.com/photo-1448043552756-e747b7a2b2b8?q=80&w=3300&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
