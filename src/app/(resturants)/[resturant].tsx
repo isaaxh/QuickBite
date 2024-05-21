@@ -1,19 +1,14 @@
-import { View, Text, Image } from "react-native";
-import React from "react";
+import { View, Text } from "react-native";
 import { useLocalSearchParams } from "expo-router";
-import BackButton from "@/components/BackButton";
 import ResturantTopSection from "@/components/ResturantTopSection";
-
-type TResturant = {
-  id: number;
-  name: string;
-  distance: number;
-  rating: number;
-  imgUrl: string;
-};
+import { useResturantContext } from "@/hooks/useResturantContext";
 
 export default function ResturantScreen() {
-  const resturant = useLocalSearchParams();
+  const { id } = useLocalSearchParams();
+  const resturants = useResturantContext();
+  const resturant = resturants.filter(
+    (resturant) => resturant.id.toString() === id,
+  )[0];
 
   return (
     <View className="bg-orange-300 flex-1">
