@@ -5,6 +5,7 @@ import { Rating } from "react-native-ratings";
 import { COLORS } from "@/constants/Colors";
 import { Link } from "expo-router";
 import UIText from "./ui/UIText";
+import Ratings from "./Rating";
 
 export type ResturantCardProps = {
   resturant: {
@@ -37,15 +38,7 @@ const ResturantCard = ({ resturant }: ResturantCardProps) => {
             {resturant.name}
           </UIText>
           <View className="flex-row justify-between mt-2">
-            <Rating
-              type="custom"
-              ratingCount={5}
-              readonly
-              fractions={1}
-              startingValue={resturant.rating}
-              ratingColor={COLORS.yellow}
-              imageSize={18}
-            />
+            <Ratings rating={resturant.rating} />
             <Distance distance={resturant.distance} />
           </View>
         </Pressable>
