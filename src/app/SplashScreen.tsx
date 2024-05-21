@@ -4,6 +4,7 @@ import { COLORS } from "@/constants/Colors";
 import TextTitle from "@/components/ui/texts/TextTitle";
 import TextBody from "@/components/ui/texts/TextBody";
 import { Link } from "expo-router";
+import UIButton from "@/components/ui/UIButton";
 
 export default function SplashScreen() {
   return (
@@ -17,16 +18,11 @@ export default function SplashScreen() {
         </TextBody>
       </View>
 
-      {/* need to find a solution to use custom components with expo router links  */}
-      <View className="mb-8 mx-5">
-        <Link href={"/(tabs)/home"} asChild>
-          <TouchableOpacity className="bg-primary-100 rounded-2xl py-4 items-center">
-            <Text style={{ fontFamily: "Gilory-SemiBold", fontSize: 16 }}>
-              Get Started
-            </Text>
-          </TouchableOpacity>
-        </Link>
-      </View>
+      <Link href={"/(tabs)/home"} asChild>
+        <UIButton variant="fill" size="large" containerStyles="mb-6">
+          Get Started
+        </UIButton>
+      </Link>
     </View>
   );
 }
