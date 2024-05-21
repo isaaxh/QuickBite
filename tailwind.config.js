@@ -37,10 +37,3 @@ module.exports = {
   },
   plugins: [],
 };
-
-/* "Gilory-Bold": require("../../assets/fonts/Gilroy-Bold.ttf"), */
-/* "Gilory-ExtraBold": require("../../assets/fonts/Gilroy-ExtraBold.otf"), */
-/* "Gilory-SemiBold": require("../../assets/fonts/Gilroy-SemiBold.ttf"), */
-/* "Gilory-Regular": require("../../assets/fonts/Gilroy-Regular.ttf"), */
-/* "Gilory-Medium": require("../../assets/fonts/Gilroy-Medium.ttf"), */
-/* "Gilory-Light": require("../../assets/fonts/Gilroy-Light.otf"), */
