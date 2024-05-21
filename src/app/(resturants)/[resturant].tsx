@@ -5,6 +5,7 @@ import { useResturantContext } from "@/hooks/useResturantContext";
 import UIText from "@/components/ui/UIText";
 import Distance from "@/components/Distance";
 import Ratings from "@/components/Rating";
+import ResturantInfoSection from "@/components/ResturantInfoSection";
 
 export default function ResturantScreen() {
   const { id } = useLocalSearchParams();
@@ -14,12 +15,14 @@ export default function ResturantScreen() {
   )[0];
 
   return (
-    <View className="bg-orange-300 flex-1">
+    <View className="bg-background flex-1">
       <ResturantTopSection imgUrl={resturant.imgUrl as string} />
-      <Text>{resturant.name}</Text>
-      <UIText>{resturant.deliveryTime}</UIText>
-      <Ratings rating={resturant.rating} />
-      <Distance distance={resturant.distance} />
+      <ResturantInfoSection
+        name={resturant.name}
+        deliveryTime={resturant.deliveryTime}
+        rating={resturant.rating}
+        distance={resturant.distance}
+      />
     </View>
   );
 }
