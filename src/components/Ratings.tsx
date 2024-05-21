@@ -2,7 +2,12 @@ import React from "react";
 import { Rating } from "react-native-ratings";
 import { COLORS } from "@/constants/Colors";
 
-const Ratings = ({ rating }: { rating: number }) => {
+type RatingsProps = {
+  rating: number;
+  iconSize?: number;
+};
+
+const Ratings = ({ rating, iconSize }: RatingsProps) => {
   return (
     <Rating
       type="custom"
@@ -11,7 +16,7 @@ const Ratings = ({ rating }: { rating: number }) => {
       fractions={1}
       startingValue={rating}
       ratingColor={COLORS.yellow}
-      imageSize={18}
+      imageSize={iconSize ?? 18}
     />
   );
 };
