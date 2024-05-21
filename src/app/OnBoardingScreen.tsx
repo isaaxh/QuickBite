@@ -1,21 +1,20 @@
-import { View, Text, Image, TouchableOpacity } from "react-native";
+import { View, Image } from "react-native";
 import React from "react";
 import { COLORS } from "@/constants/Colors";
-import TextTitle from "@/components/ui/texts/TextTitle";
-import TextBody from "@/components/ui/texts/TextBody";
 import { Link } from "expo-router";
 import UIButton from "@/components/ui/UIButton";
+import UIText from "@/components/ui/UIText";
 
-export default function SplashScreen() {
+export default function OnBoardingScreen() {
   return (
     <View style={{ backgroundColor: COLORS.white }} className="flex-1 bg-white">
       <View className="flex-1 justify-center items-center p-3">
         <Image source={require("../../assets/images/splash_screen.png")} />
-        <TextTitle>Food to blow your mind!</TextTitle>
-        <TextBody>
+        <UIText variant="header">Food to blow your mind!</UIText>
+        <UIText variant="body2">
           Whether you're craving pizza, sushi or something in between, we have
           got your back.
-        </TextBody>
+        </UIText>
       </View>
 
       <Link href={"/(tabs)/home"} asChild>

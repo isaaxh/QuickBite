@@ -1,6 +1,6 @@
 import { Redirect } from "expo-router";
 
 const Index = () => {
-  return <Redirect href="/SplashScreen" />;
+  return <Redirect href="/OnBoardingScreen" />;
 };
 export default Index;
