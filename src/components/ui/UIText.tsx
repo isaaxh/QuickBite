@@ -24,14 +24,14 @@ interface UITextProps extends TextProps, VariantProps<typeof txtStyles> {
 
 const textVariants = {
   variant: {
-    base: ["font-GiloryMedium text-base text-center"],
-    header: ["font-GiloryBold text-2xl mt-4 mb-1.5"],
-    header2: ["font-GilorySemiBold text-xl"],
-    header3: ["font-GiloryBold text-base text-black"],
-    header4: ["font-GilorySemiBold text-xs"],
-    body: ["font-GiloryMedium text-base text-gray-500"],
-    body2: ["font-GiloryMedium text-xs text-gray-500"],
-    body3: ["font-GilorySemiBold text-xs text-gray-500"],
+    base: ["font-GiloryMedium text-base text-center"], // 16px
+    header: ["font-GiloryBold text-2xl mt-4 mb-1.5"], // 24px
+    header2: ["font-GilorySemiBold text-xl"], // 20px
+    header3: ["font-GiloryBold text-base text-black"], // 16px
+    header4: ["font-GilorySemiBold text-xs"], // 12px
+    body: ["font-GiloryMedium text-base text-gray-500"], // 16px
+    body2: ["font-GiloryMedium text-xs text-gray-500"], // 12px
+    body3: ["font-GilorySemiBold text-xs text-gray-500"], // 12px
   },
 };
 
