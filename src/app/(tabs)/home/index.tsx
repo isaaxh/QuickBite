@@ -1,18 +1,15 @@
 import { Text, StyleSheet, Pressable } from "react-native";
 import { View } from "@/components/Themed";
 import Header from "@/components/Header";
-import {
-  SafeAreaView,
-  SafeAreaProvider,
-  SafeAreaInsetsContext,
-  useSafeAreaInsets,
-} from "react-native-safe-area-context";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { COLORS } from "@/constants/Colors";
 import { Link } from "expo-router";
 import SearchBar from "@/components/SearchBar";
 import useToggle from "@/hooks/useToggle";
 import { useState } from "react";
 import MyResturantCardList from "@/components/MyResturantCardList";
+import UIText from "@/components/ui/UIText";
+import UIButton from "@/components/ui/UIButton";
 
 export default function HomeScreen() {
   const { status: searchActive, setStatus: toggleSearchActive } =
@@ -29,21 +26,16 @@ export default function HomeScreen() {
         setSearchPhrase={setSearchPhrase}
       />
       <View className="w-full mb-4 mt-2 px-4 flex-row items-center justify-between">
-        <Text style={{ fontFamily: "Gilory-Bold", fontSize: 17 }}>
-          Popular Resturants
-        </Text>
+        <UIText variant="header3">Popular Resturants</UIText>
         <Link href="/(resturants)/AllResturantScreen" asChild>
-          <Pressable hitSlop={5}>
-            <Text
-              style={{
-                fontFamily: "Gilory-SemiBold",
-                fontSize: 13,
-                color: COLORS["black-500"],
-              }}
-            >
-              View all
-            </Text>
-          </Pressable>
+          <UIButton
+            hitSlop={5}
+            variant="bare"
+            size="small"
+            textStyles="font-GilorySemiBold text-gray-500"
+          >
+            View all
+          </UIButton>
         </Link>
       </View>
       <MyResturantCardList />
