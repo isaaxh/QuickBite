@@ -3,7 +3,7 @@ import React from "react";
 import Distance from "./Distance";
 import { Link } from "expo-router";
 import UIText from "./ui/UIText";
-import Ratings from "./Rating";
+import Ratings from "@/components/Ratings";
 
 export type ResturantCardProps = {
   resturant: {
