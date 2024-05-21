@@ -37,7 +37,7 @@ export default [
   },
   {
     id: 5,
-    name: "Pizza Palace",
+    name: "The Pizza Palace",
     distance: 1.7,
     rating: 3.0,
     deliveryTime: "30-40 mins",
