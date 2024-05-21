@@ -1,8 +1,6 @@
 import { View, Image, Pressable } from "react-native";
 import React from "react";
 import Distance from "./Distance";
-import { Rating } from "react-native-ratings";
-import { COLORS } from "@/constants/Colors";
 import { Link } from "expo-router";
 import UIText from "./ui/UIText";
 import Ratings from "./Rating";
