@@ -1,9 +1,10 @@
-import { View, Text, Image, TouchableOpacity, Pressable } from "react-native";
+import { View, Image, Pressable } from "react-native";
 import React from "react";
 import Distance from "./Distance";
 import { Rating } from "react-native-ratings";
 import { COLORS } from "@/constants/Colors";
-import { Link, useLocalSearchParams } from "expo-router";
+import { Link } from "expo-router";
+import UIText from "./ui/UIText";
 
 export type ResturantCardProps = {
   resturant: {
@@ -26,18 +27,15 @@ const ResturantCard = ({ resturant }: ResturantCardProps) => {
       <Link
         href={{
           pathname: `/(resturants)/${resturant.id}`,
-          params: resturant,
+          params: { id: resturant.id },
         }}
         asChild
       >
         <Pressable>
           <Image source={resturantImg} className="rounded-3xl" />
-          <Text
-            style={{ fontFamily: "Gilory-SemiBold", fontSize: 20 }}
-            className="mt-1"
-          >
+          <UIText variant="header2" textStyles="mt-1 text-left">
             {resturant.name}
-          </Text>
+          </UIText>
           <View className="flex-row justify-between mt-2">
             <Rating
               type="custom"
