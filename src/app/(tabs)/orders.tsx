@@ -2,6 +2,7 @@ import { StyleSheet } from "react-native";
 
 import EditScreenInfo from "@/components/EditScreenInfo";
 import { Text, View } from "@/components/Themed";
+import UIText from "@/components/ui/UIText";
 
 export default function OrdersScreen() {
   return (
@@ -13,6 +14,13 @@ export default function OrdersScreen() {
         darkColor="rgba(255,255,255,0.1)"
       />
       <EditScreenInfo path="app/(tabs)/two.tsx" />
+
+      <UIText>base</UIText>
+      <UIText variant="header">header 1</UIText>
+      <UIText variant="header2">header 2</UIText>
+      <UIText variant="header3">header 3</UIText>
+      <UIText variant="body">body</UIText>
+      <UIText variant="body2">body</UIText>
     </View>
   );
 }
