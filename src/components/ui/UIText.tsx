@@ -1,4 +1,4 @@
-import { Text } from "react-native";
+import { Text, View } from "react-native";
 import React, { ReactNode, forwardRef } from "react";
 import { VariantProps, cva } from "class-variance-authority";
 import { TextProps } from "react-native-svg";
@@ -28,7 +28,9 @@ const textVariants = {
     header: ["font-GiloryBold text-2xl mt-4 mb-1.5"], // 24px
     header2: ["font-GilorySemiBold text-xl"], // 20px
     header3: ["font-GiloryBold text-base text-black"], // 16px
-    header4: ["font-GilorySemiBold text-xs"], // 12px
+    header4: ["font-GiloryBold text-xs text-black"], // 12px
+    header5: ["font-GilorySemiBold text-base text-black"],
+    header6: ["font-GilorySemiBold text-xs"], // 12px
     body: ["font-GiloryMedium text-base text-gray-500"], // 16px
     body2: ["font-GiloryMedium text-xs text-gray-500"], // 12px
     body3: ["font-GilorySemiBold text-xs text-gray-500"], // 12px
