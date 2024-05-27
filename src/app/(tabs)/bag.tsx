@@ -1,8 +1,7 @@
-import { Pressable, StyleSheet, TouchableOpacity } from "react-native";
+import { StyleSheet } from "react-native";
 import EditScreenInfo from "@/components/EditScreenInfo";
 import { Text, View } from "@/components/Themed";
 import UIButton from "@/components/ui/UIButton";
-import { Link } from "expo-router";
 
 export default function BagScreen() {
   return (
@@ -24,21 +23,9 @@ export default function BagScreen() {
         Outline
       </UIButton>
 
-      <Link href={"/(tabs)/home"} asChild>
-        <UIButton variant="fill" size="large">
-          Get Started
-        </UIButton>
-      </Link>
-      <View className="mb-8 mx-5 bg-green-400">
-        <Pressable
-          android_ripple={{ color: "black", borderless: true }}
-          className="bg-primary-100 rounded-2xl py-4 items-center"
-        >
-          <Text style={{ fontFamily: "Gilory-SemiBold", fontSize: 16 }}>
-            Get Started
-          </Text>
-        </Pressable>
-      </View>
+      <UIButton variant="fill" size="large">
+        Get Started
+      </UIButton>
     </View>
   );
 }
