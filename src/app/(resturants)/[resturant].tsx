@@ -1,11 +1,9 @@
-import { View, SectionList } from "react-native";
+import { View } from "react-native";
 import { useLocalSearchParams } from "expo-router";
 import ResturantTopSection from "@/components/ResturantTopSection";
 import { useResturantContext } from "@/hooks/useResturantContext";
 import ResturantInfoSection from "@/components/ResturantInfoSection";
-import UIText from "@/components/ui/UIText";
-import { useEffect, useRef, useState } from "react";
-import ProductCard from "@/components/ProductCard";
+import { useState } from "react";
 import ResturantSections from "@/components/ResturantSections";
 import { IRestaurant } from "@/utils/types";
 import ResturantProducts from "@/components/ResturantProducts";
