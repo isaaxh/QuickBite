@@ -1,8 +1,6 @@
-import { Text, StyleSheet, Pressable } from "react-native";
 import { View } from "@/components/Themed";
 import Header from "@/components/Header";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { COLORS } from "@/constants/Colors";
 import { Link } from "expo-router";
 import SearchBar from "@/components/SearchBar";
 import useToggle from "@/hooks/useToggle";
@@ -38,7 +36,7 @@ export default function HomeScreen() {
           </UIButton>
         </Link>
       </View>
-      <MyResturantCardList />
+      <MyResturantCardList popular={true} />
     </SafeAreaView>
   );
 }
