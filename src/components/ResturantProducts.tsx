@@ -34,13 +34,15 @@ const ResturantProducts = ({ index, resturant }: ResturantProductsProps) => {
           index,
         };
       }}
-      renderItem={({ item }) => (
+      renderItem={({ item, section }) => (
         <ProductCard
           id={item.id}
           name={item.name}
           description={item.description}
           price={item.price}
           imgUrl={item.imgUrl}
+          resturantId={resturant.id}
+          sectionId={section.id}
           ITEM_HEIGHT={ITEM_HEIGHT}
         />
       )}
