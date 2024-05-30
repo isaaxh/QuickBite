@@ -1,6 +1,6 @@
 import { View, Text, Image } from "react-native";
 import React from "react";
-import BackButton from "@/components/BackButton";
+import NavButton from "./NavButton";
 
 type ResturantTopSectionProps = { imgUrl: string };
 
@@ -13,7 +13,7 @@ const ResturantTopSection = ({ imgUrl }: ResturantTopSectionProps) => {
   return (
     <>
       <View className="absolute z-50 top-10 left-5">
-        <BackButton />
+        <NavButton variant="back" />
       </View>
       <View>
         <Image source={resturantImg} />
