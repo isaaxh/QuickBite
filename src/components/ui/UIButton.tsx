@@ -3,12 +3,23 @@ import React, { ReactNode, forwardRef, useState } from "react";
 import { VariantProps, cva } from "class-variance-authority";
 import { cn } from "@/utils/cn";
 
-interface UIButtonProps extends PressableProps, VariantProps<typeof btnStyles> {
+type UIButtonProps = {
   children: ReactNode;
   containerStyles?: string;
   buttonStyles?: string;
   textStyles?: string;
-}
+} & PressableProps &
+  OptionalButtonProps &
+  VariantProps<typeof btnStyles>;
+
+type OptionalButtonProps =
+  | {
+      multiText: true;
+      text2: ReactNode;
+    }
+  | {
+      multiText?: false;
+    };
 
 const buttonVariants = {
   text: {
@@ -46,8 +57,15 @@ const UIButton = forwardRef<View, UIButtonProps>(
       containerStyles,
       buttonStyles,
       textStyles,
+      multiText,
       ...props
     } = Props;
+
+    let text2;
+
+    if (Props.multiText) {
+      text2 = Props.text2;
+    }
 
     const [isPressed, setPressed] = useState(false);
 
@@ -68,13 +86,39 @@ const UIButton = forwardRef<View, UIButtonProps>(
             isPressed ? "opacity-60" : "",
           )}
           {...props}
-          /* onPress={onBtnPress} */
         >
-          <Text
-            className={cn(buttonVariants.text.baseText, textStyle, textStyles)}
-          >
-            {children}
-          </Text>
+          {multiText ? (
+            <>
+              <Text
+                className={cn(
+                  buttonVariants.text.baseText,
+                  textStyle,
+                  textStyles,
+                )}
+              >
+                {children}
+              </Text>
+              <Text
+                className={cn(
+                  buttonVariants.text.baseText,
+                  textStyle,
+                  textStyles,
+                )}
+              >
+                {text2}
+              </Text>
+            </>
+          ) : (
+            <Text
+              className={cn(
+                buttonVariants.text.baseText,
+                textStyle,
+                textStyles,
+              )}
+            >
+              {children}
+            </Text>
+          )}
         </Pressable>
       </View>
     );
