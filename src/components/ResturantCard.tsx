@@ -4,16 +4,11 @@ import Distance from "./Distance";
 import { Link } from "expo-router";
 import UIText from "./ui/UIText";
 import Ratings from "@/components/Ratings";
+import { IRestaurant } from "@/utils/types";
 
-export type ResturantCardProps = {
-  resturant: {
-    id: number;
-    name: string;
-    distance: number;
-    rating: number;
-    imgUrl: string;
-  };
-};
+interface ResturantCardProps {
+  resturant: IRestaurant;
+}
 
 const ResturantCard = ({ resturant }: ResturantCardProps) => {
   const resturantImg = {
