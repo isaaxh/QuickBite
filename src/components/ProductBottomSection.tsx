@@ -33,7 +33,7 @@ const ProductBottomSection = ({
           containerStyles="flex-1"
           buttonStyles={"rounded-xl flex-row flex-1 py-3 px-4 justify-between"}
         >
-          <Text>Add</Text>
+          <Text>Add to bag</Text>
         </UIButton>
       </View>
     </>
