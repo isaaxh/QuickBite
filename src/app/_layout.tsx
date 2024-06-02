@@ -65,6 +65,7 @@ function RootLayoutNav() {
           <Stack.Screen name="OnBoardingScreen" />
           <Stack.Screen name="(resturants)" />
           <Stack.Screen name="(tabs)" />
+          <Stack.Screen name="(auth)" />
           <Stack.Screen name="modal" options={{ presentation: "modal" }} />
         </Stack>
       </ThemeProvider>
