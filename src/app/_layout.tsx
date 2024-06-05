@@ -11,6 +11,8 @@ import { useEffect } from "react";
 import { useColorScheme } from "@/components/useColorScheme";
 import { ResturantContext } from "@/contexts/resturantContext";
 import resturants from "@/assets/data/resturants";
+import AuthProvider from "@/services/providers/AuthProvider";
+import ResturantProvider from "@/services/providers/ResturantProvider";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -59,16 +61,20 @@ function RootLayoutNav() {
   const colorScheme = useColorScheme();
 
   return (
-    <ResturantContext.Provider value={resturants}>
-      <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-        <Stack screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="OnBoardingScreen" />
-          <Stack.Screen name="(resturants)" />
-          <Stack.Screen name="(tabs)" />
-          <Stack.Screen name="(auth)" />
-          <Stack.Screen name="modal" options={{ presentation: "modal" }} />
-        </Stack>
-      </ThemeProvider>
-    </ResturantContext.Provider>
+    <AuthProvider>
+      <ResturantProvider>
+        <ThemeProvider
+          value={colorScheme === "dark" ? DarkTheme : DefaultTheme}
+        >
+          <Stack screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="OnBoardingScreen" />
+            <Stack.Screen name="(resturants)" />
+            <Stack.Screen name="(tabs)" />
+            <Stack.Screen name="(auth)" />
+            <Stack.Screen name="modal" options={{ presentation: "modal" }} />
+          </Stack>
+        </ThemeProvider>
+      </ResturantProvider>
+    </AuthProvider>
   );
 }

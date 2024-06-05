@@ -3,12 +3,15 @@ import EditScreenInfo from "@/components/EditScreenInfo";
 import { Text, View } from "@/components/Themed";
 import UIButton from "@/components/ui/UIButton";
 import RequireAuth from "@/app/RequireAuth";
+import { useAuth } from "@/hooks/useAuth";
+import { AuthContextProps } from "@/services/providers/AuthProvider";
 
 export default function BagScreen() {
-  const userLoggedIn = false;
+  const { user, logout } = useAuth() as AuthContextProps;
+
   return (
     <View style={styles.container}>
-      {userLoggedIn ? (
+      {user ? (
         <>
           <Text className="font-GiloryExtraBold" style={styles.title}>
             Bag
@@ -20,15 +23,8 @@ export default function BagScreen() {
           />
           <EditScreenInfo path="app/(tabs)/two.tsx" />
 
-          <UIButton variant="bare" size="small">
-            Text
-          </UIButton>
-          <UIButton variant="outline" size="default">
-            Outline
-          </UIButton>
-
-          <UIButton variant="fill" size="large">
-            Get Started
+          <UIButton onPress={logout} variant="fill" size="large">
+            Logout
           </UIButton>
         </>
       ) : (

@@ -3,12 +3,14 @@ import { StyleSheet } from "react-native";
 import EditScreenInfo from "@/components/EditScreenInfo";
 import { Text, View } from "@/components/Themed";
 import RequireAuth from "../RequireAuth";
+import { useAuth } from "@/hooks/useAuth";
+import { AuthContextProps } from "@/services/providers/AuthProvider";
 
 export default function ProfileScreen() {
-  const userLoggedIn = false;
+  const { user } = useAuth() as AuthContextProps;
   return (
     <View style={styles.container}>
-      {userLoggedIn ? (
+      {user ? (
         <>
           <Text style={styles.title}>Profile</Text>
           <View

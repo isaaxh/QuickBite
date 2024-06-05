@@ -4,12 +4,14 @@ import EditScreenInfo from "@/components/EditScreenInfo";
 import { Text, View } from "@/components/Themed";
 import UIText from "@/components/ui/UIText";
 import RequireAuth from "../RequireAuth";
+import { AuthContextProps } from "@/services/providers/AuthProvider";
+import { useAuth } from "@/hooks/useAuth";
 
 export default function OrdersScreen() {
-  const userLoggedIn = false;
+  const { user } = useAuth() as AuthContextProps;
   return (
     <View style={styles.container}>
-      {userLoggedIn ? (
+      {user ? (
         <>
           <Text style={styles.title}>Orders</Text>
           <View
