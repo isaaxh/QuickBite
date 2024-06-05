@@ -9,9 +9,13 @@ import { useColorScheme } from "@/components/useColorScheme";
 import { useClientOnlyValue } from "@/components/useClientOnlyValue";
 import TabBarIcon from "@/components/TabBarIcon";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { AuthContextProps } from "@/services/providers/AuthProvider";
+import { useAuth } from "@/hooks/useAuth";
+import RequireAuth from "../RequireAuth";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
+  const { user } = useAuth() as AuthContextProps;
 
   return (
     <Tabs
