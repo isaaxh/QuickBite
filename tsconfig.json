@@ -10,6 +10,8 @@
       "@/ui/*": ["src/components/ui/*"],
       "@/utils/*": ["src/utils/*"],
       "@/constants/*": ["src/constants/*"],
+      "@/services/*": ["src/services/*"],
+      "@/contexts/*": ["src/services/contexts/*"],
       "@/assets/*": ["assets/*"]
     }
   },
