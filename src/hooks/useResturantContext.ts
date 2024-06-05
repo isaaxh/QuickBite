@@ -1,4 +1,4 @@
-import { ResturantContext } from "@/contexts/resturantContext";
+import ResturantContext from "@/contexts/ResturantContext";
 import { useContext } from "react";
 
 export function useResturantContext() {
