@@ -4,10 +4,10 @@ import Distance from "./Distance";
 import { Link } from "expo-router";
 import UIText from "./ui/UIText";
 import Ratings from "@/components/Ratings";
-import { IRestaurant } from "@/utils/types";
+import { TRestaurant } from "@/utils/types";
 
 interface ResturantCardProps {
-  resturant: IRestaurant;
+  resturant: TRestaurant;
 }
 
 const ResturantCard = ({ resturant }: ResturantCardProps) => {

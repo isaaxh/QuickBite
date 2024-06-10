@@ -2,21 +2,18 @@ import { View, FlatList } from "react-native";
 import React, { useEffect, useRef } from "react";
 import UIButton from "./ui/UIButton";
 import UIText from "./ui/UIText";
-import { ISection } from "@/utils/types";
+import { TSection } from "@/utils/types";
 
 const ITEM_WIDTH = 125;
 
 interface ResturantSectionsProps {
-  sections: ISection[];
+  sections: TSection[];
   index: number;
   setIndex: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const ResturantSections = ({
-  index,
-  sections,
-  setIndex,
-}: ResturantSectionsProps) => {
+const ResturantSections = (props: ResturantSectionsProps) => {
+  const { index, sections, setIndex } = props;
   const ref = useRef<FlatList>(null);
 
   useEffect(() => {

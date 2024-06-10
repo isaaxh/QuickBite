@@ -5,13 +5,13 @@ import { useResturantContext } from "@/hooks/useResturantContext";
 import ResturantInfoSection from "@/components/ResturantInfoSection";
 import { useState } from "react";
 import ResturantSections from "@/components/ResturantSections";
-import { IRestaurant } from "@/utils/types";
+import { TRestaurant } from "@/utils/types";
 import ResturantProducts from "@/components/ResturantProducts";
 
 export default function ResturantScreen() {
   const { id } = useLocalSearchParams();
-  const resturants: IRestaurant[] = useResturantContext();
-  const resturant: IRestaurant = resturants.filter(
+  const resturants: TRestaurant[] = useResturantContext() as TRestaurant[];
+  const resturant: TRestaurant = resturants.filter(
     (resturant) => resturant.id.toString() === id,
   )[0];
   const [index, setIndex] = useState(0);

@@ -12,6 +12,8 @@ const ProductScreen = () => {
     sectionId: string;
   }>();
 
+  // refactor this code better
+
   const { product } = useProduct({
     id: id !== undefined ? id : "1",
     resturantId: resturantId !== undefined ? resturantId : "1",
