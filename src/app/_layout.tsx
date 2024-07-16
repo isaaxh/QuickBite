@@ -9,8 +9,6 @@ import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import { useColorScheme } from "@/components/useColorScheme";
-import { ResturantContext } from "@/contexts/resturantContext";
-import resturants from "@/assets/data/resturants";
 import AuthProvider from "@/services/providers/AuthProvider";
 import ResturantProvider from "@/services/providers/ResturantProvider";
 
