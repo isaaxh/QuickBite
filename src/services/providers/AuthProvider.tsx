@@ -7,6 +7,7 @@ import {
 import { ReactNode, useState } from "react";
 import { FIREBASE_AUTH } from "../../../firebaseConfig";
 import AuthContext from "@/contexts/AuthContext";
+import { Keyboard } from "react-native";
 
 interface AuthProviderProps {
   children: ReactNode;
@@ -37,6 +38,7 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
   const auth = FIREBASE_AUTH;
 
   const login = async (data: AuthData) => {
+    Keyboard.dismiss();
     setLoading(true);
     try {
       const response = await signInWithEmailAndPassword(
@@ -54,6 +56,7 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
   };
 
   const signup = async (data: AuthData) => {
+    Keyboard.dismiss();
     setLoading(true);
     try {
       const response = await createUserWithEmailAndPassword(
@@ -74,36 +77,6 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
     setUser(null);
     FIREBASE_AUTH.signOut();
   };
-
-  /* const login = async (data: AuthData) => { */
-  /*   try { */
-  /*     const response = await fetch("your-api-endpoint/auth/login", { */
-  /*       method: "POST", */
-  /*       headers: { */
-  /*         "Content-Type": "application/json", */
-  /*       }, */
-  /*       body: JSON.stringify(data), */
-  /*     }); */
-  /*     const res = await response.json(); */
-  /*     if (res.data) { */
-  /*       setUser(res.data.user); */
-  /*       setToken(res.token); */
-  /*       localStorage.setItem("site", res.token); */
-  /*       navigate("/dashboard"); */
-  /*       return; */
-  /*     } */
-  /*     throw new Error(res.message); */
-  /*   } catch (err) { */
-  /*     console.error(err); */
-  /*   } */
-  /* }; */
-
-  /* const logOut = () => { */
-  /*   setUser(null); */
-  /*   setToken(""); */
-  /*   localStorage.removeItem("site"); */
-  /*   navigate("/login"); */
-  /* }; */
 
   const value: AuthContextProps = {
     user,
