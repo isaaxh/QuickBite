@@ -3,6 +3,7 @@ import React, { Dispatch } from "react";
 import ItemIncrementer from "./ItemIncrementer";
 import UIButton from "./ui/UIButton";
 import UIText from "./ui/UIText";
+import { Link } from "expo-router";
 
 interface ProductBottomSectionProps {
   productPrice: number;
@@ -22,19 +23,24 @@ const ProductBottomSection = ({
           itemNumber={itemNumber}
           setItemNumber={setItemNumber}
         />
-        <UIButton
-          variant={"fill"}
-          multiText={true}
-          text2={
-            <UIText variant={"header6"}>
-              $ {(productPrice * itemNumber).toFixed(2)}
-            </UIText>
-          }
-          containerStyles="flex-1"
-          buttonStyles={"rounded-xl flex-row flex-1 py-3 px-4 justify-between"}
-        >
-          <Text>Add to bag</Text>
-        </UIButton>
+
+        <Link href={"/(cart)/CartScreen"} asChild>
+          <UIButton
+            variant={"fill"}
+            multiText={true}
+            text2={
+              <UIText variant={"header6"}>
+                $ {(productPrice * itemNumber).toFixed(2)}
+              </UIText>
+            }
+            containerStyles="flex-1"
+            buttonStyles={
+              "rounded-xl flex-row flex-1 py-3 px-4 justify-between"
+            }
+          >
+            <Text>Add to bag</Text>
+          </UIButton>
+        </Link>
       </View>
     </>
   );
