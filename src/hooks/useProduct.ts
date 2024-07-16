@@ -1,4 +1,4 @@
-import { IProduct, IRestaurant, ISection } from "@/utils/types";
+import { TProduct, TRestaurant, TSection } from "@/utils/types";
 import { useResturantContext } from "./useResturantContext";
 
 interface UseProductProps {
@@ -8,14 +8,14 @@ interface UseProductProps {
 }
 
 const useProduct = ({ id, sectionId, resturantId }: UseProductProps) => {
-  const RESTURANTS: IRestaurant[] = useResturantContext();
-  const resturant: IRestaurant = RESTURANTS.filter(
+  const RESTURANTS: TRestaurant[] = useResturantContext() as TRestaurant[];
+  const resturant: TRestaurant = RESTURANTS.filter(
     (resturant) => resturantId === resturant.id.toString(),
   )[0];
-  const section: ISection = resturant.sections.filter(
+  const section: TSection = resturant.sections.filter(
     (section) => sectionId === section.id.toString(),
   )[0];
-  const product: IProduct = section.data.filter(
+  const product: TProduct = section.data.filter(
     (product) => id === product.id.toString(),
   )[0];
 
