@@ -1,4 +1,4 @@
-import { View, KeyboardAvoidingView, Platform, ScrollView } from "react-native";
+import { View } from "react-native";
 import React from "react";
 import NavButton from "./NavButton";
 import UIText from "./ui/UIText";
