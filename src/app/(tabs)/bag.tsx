@@ -5,6 +5,7 @@ import UIButton from "@/components/ui/UIButton";
 import RequireAuth from "@/app/RequireAuth";
 import { useAuth } from "@/hooks/useAuth";
 import { AuthContextProps } from "@/services/providers/AuthProvider";
+import { Profile } from "iconsax-react-native";
 
 export default function BagScreen() {
   const { user, logout } = useAuth() as AuthContextProps;
@@ -21,6 +22,25 @@ export default function BagScreen() {
             lightColor="#eee"
             darkColor="rgba(255,255,255,0.1)"
           />
+          <View className="flex-row">
+            <UIButton
+              variant="icon"
+              size="small"
+              containerStyles="bg-red-200"
+              /* buttonStyles="bg-red-200" */
+            >
+              <Profile color="#000000" size={32} />
+            </UIButton>
+            <UIButton
+              variant="icon"
+              size="small"
+              /* containerStyles="bg-red-200" */
+              buttonStyles="m-0 p-0"
+              textStyles="m-0 p-0"
+            >
+              <Profile color="#000000" size={24} />
+            </UIButton>
+          </View>
           <EditScreenInfo path="app/(tabs)/two.tsx" />
 
           <UIButton onPress={logout} variant="fill" size="large">
