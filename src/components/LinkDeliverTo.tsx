@@ -1,8 +1,8 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { Text, TouchableOpacity } from "react-native";
 import React from "react";
 import { Link } from "expo-router";
-import Icon from "./Icon";
 import { COLORS } from "@/constants/Colors";
+import { ArrowDown2 } from "iconsax-react-native";
 
 export default function DerliverToLink() {
   return (
@@ -21,7 +21,7 @@ export default function DerliverToLink() {
           >
             08776 Serenity Ports, New York
           </Text>
-          <Icon name="chevron-down" color={COLORS["black-500"]} />
+          <ArrowDown2 size="16" color={COLORS["black-500"]} />
         </TouchableOpacity>
       </Link>
     </>
