@@ -45,7 +45,7 @@ export default function TabLayout() {
         name="home"
         options={{
           title: "Home",
-          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color as string} />,
           headerRight: () => (
             <Link href="/modal" asChild>
               <Pressable>
@@ -66,14 +66,14 @@ export default function TabLayout() {
         name="bag"
         options={{
           title: "Bag",
-          tabBarIcon: ({ color }) => <TabBarIcon name="bag2" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="bag2" color={color as string} />,
         }}
       />
       <Tabs.Screen
         name="orders"
         options={{
           title: "Orders",
-          tabBarIcon: ({ color }) => <TabBarIcon name="note" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="note" color={color as string} />,
         }}
       />
 
@@ -82,7 +82,7 @@ export default function TabLayout() {
         options={{
           title: "Profile",
           tabBarIcon: ({ color }) => (
-            <TabBarIcon name="profile" color={color} />
+            <TabBarIcon name="profile" color={color as string} />
           ),
         }}
       />
